@@ -1,0 +1,19 @@
+{
+  "name": "sam-irc-nodejs",
+  "version": "0.1.0",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "express": "4.13.*",
+    "mysql": "2.10.*",
+    "sequelize": "3.18.*",
+    "socket.io": "1.4.*"
+  },
+  "author": "Stéphane PHONGPHAYSANE <phong.steph@gmail.com>",
+  "description": "NodeJS IRC Project",
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phong-steph/sam-irc-nodejs.git"
+  }
+}
