@@ -30,20 +30,4 @@ User.register = function(username, password){
   User.create({username : username, password : password});
 };
 
-// var Message = db.define('message', {
-//   message: {
-//     type: Sequelize.TEXT,
-//     field: 'Message'
-//   },
-//   idUser: {
-//     type: Sequelize.INTEGER,
-//     field: 'idUser'
-//   }
-//
-// }, {
-//   freezeTableName: true,
-// });
-
-
-
 module.exports = User;

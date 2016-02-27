@@ -1,8 +1,8 @@
 var passport = require('passport');
-var LocalStrategy = require('passport-local').Strategy;
+var Strategy = require('passport-local').Strategy;
 var User = require('../models/user');
 
-passport.use(new LocalStrategy({
+passport.use(new Strategy({
   // passReqToCallback: true
 }, function(username, password, cb) {
     User.findByUsername(username)

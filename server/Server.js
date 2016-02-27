@@ -7,6 +7,7 @@ var passport = require('./libs/passport');
 var bodyParser = require('body-parser').urlencoded({ extended: true });
 var morgan = require('morgan')('combined');
 var cookie = require('cookie-parser')();
+var io = require('socket.io');
 
 app.use(flash());
 app.use(morgan);
