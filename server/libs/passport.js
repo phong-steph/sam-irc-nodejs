@@ -19,10 +19,12 @@ passport.serializeUser(function(user, cb) {
 });
 
 passport.deserializeUser(function(id, cb) {
-  User.findById(id, function (err, user) {
-    if (err) { return cb(err); }
-    cb(null, user);
+    User.findById(id)
+    .then(function(user) {
+      cb(null, user);
+    }).catch(function(err) {
+      return cb(err);
+    });
   });
-});
 
 module.exports = passport;

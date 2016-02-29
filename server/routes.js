@@ -1,9 +1,6 @@
 var User = require('./models/user');
-var io = require('socket.io');
 
 module.exports = function(app, passport){
-
-  io = io.listen(app.server);
 
   app.get('/', function(req, res){
     res.render('login');
@@ -26,19 +23,21 @@ module.exports = function(app, passport){
       res.render('register');
     });
 
+    app.get('/chat',
+      function(req, res){
+        if (req.user){
+          console.log(req.user.username);
+          res.render('chat', {username: req.user.username});
+        }
+        else
+          res.render('login');
+    });
+
   app.post('/login',
     passport.authenticate('local', {failureRedirect: 'login',}),
     function(req, res){
-      console.log("FICHTRE");
       res.redirect('/chat');
-      // res.render('chat');
     });
-
-    app.get('/chat',
-      function(req, res){
-        res.render('chat');
-    });
-
 
   app.post('/register',
     function(req, res){
