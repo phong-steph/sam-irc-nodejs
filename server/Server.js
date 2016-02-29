@@ -29,7 +29,7 @@ io.on('connection', function (socket, username){
     socket.username = username;
   });
   socket.on('msgst', function(msg){
-    io.emit('msgrcv', socket.username + ':' + msg);
+    io.emit('msgrcv', socket.username + ': ' + msg);
   });
 });
 

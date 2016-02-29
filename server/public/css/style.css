@@ -38,6 +38,10 @@ body {
 	height: 500px;
 }
 
+a {
+	text-decoration: none;
+}
+
 #wrapper {
 	/* Center wrapper perfectly */
 	width: 300px;
@@ -84,6 +88,12 @@ body {
 	background: url(images/gradient.png) no-repeat;
 }
 */
+
+#chatbox{
+	display: inline-block;
+	margin-top: 10px;
+	font-family: 'Bree Serif', serif;
+}
 
 .gradient {
 	/* Center Positioning */
@@ -134,7 +144,28 @@ HEADER
 	padding: 40px 30px 30px 30px;
 }
 
+.login-form .header .logout{
+	float:right;
+	padding: 10px 20px;
+
+	font-family: 'Bree Serif', serif;
+	font-weight: 300;
+	font-size: 18px;
+	color: #fff;
+	text-shadow: 0px 1px 0 rgba(0,0,0,0.25);
+
+	background: #56c2e1;
+	border: 1px solid #46b3d3;
+	border-radius: 5px;
+	cursor: pointer;
+
+	box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+	-moz-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+	-webkit-box-shadow: inset 0 0 2px rgba(256,256,256,0.75);
+}
+
 .login-form .header h1 {
+	float: left;
 	font-family: 'Bree Serif', serif;
 	font-weight: 300;
 	font-size: 28px;
