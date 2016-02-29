@@ -1,15 +1,34 @@
-<form action="register" method="post">
-  <h1>Register Form</h1>
-    <div>
-        <label>Username:</label>
-        <input type="text" placeholder="username" required="" id="username" name="username"/>
+<!DOCTYPE html>
+
+<html lang='en'>
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        HTML Document Structure
+    </title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+
+<div id="wrapper">
+  <form name="login-forlm" class="login-form" action="register" method="post">
+    <div class="header">
+      <h1>Register Form</h1>
     </div>
-    <div>
-        <label>Password:</label>
-        <input type="password" placeholder="password" required="" id="password" name="password"/>
+
+    <div class="content">
+      <input name="username" type="text" class="input username" id="username" placeholder="Username" />
+    <div class="user-icon"></div>
+      <input name="password" type="password" class="input password" id="password" placeholder="Password" />
+    <div class="pass-icon"></div>
     </div>
-    <div>
-        <input type="submit" value="Register"/>
+
+    <div class="footer">
+      <input type="submit" name="submit" value="Register" class="button" />
     </div>
-</form>
-<a href="/">go back</a>
+  </form>
+
+</div>
+<div class="gradient"></div>
+</body>
+</html>

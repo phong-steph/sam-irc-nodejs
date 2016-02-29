@@ -1,21 +1,38 @@
-<style>
-    #zone_chat strong {
-        color: white;
-        background-color: black;
-        padding: 2px;
-    }
-</style>
-<h1>My IRC</h1>
-<div id="chatbox"></div>
+<!DOCTYPE html>
 
-<form name="message" action="">
-    <input type="text" name="message" id="m" placeholder="Votre message..." size="50" autofocus />
-    <input type="submit" id="envoi_message" value="Envoyer" />
-</form>
-<%= username %>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        HTML Document Structure
+    </title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+
+<div id="wrapper">
+  <form name="message" method="" class="login-form">
+    <div class="header">
+      <h1>MyIRC</h1>
+    </div>
+    <div class="content">
+      <div id="chatbox"></div>
+    </div>
+    <div class="footer">
+        <input type="textarea" name="message" id="m" class="message" rows="4" placeholder="Votre message..." size="30" autofocus />
+        <input type="submit" name="send" value="Send" class="button send" />
+    </div>
+  </form>
+
+</div>
+<div class="gradient"></div>
+</body>
+</html>
+
 <script src="/socket.io/socket.io.js"></script>
-<script src="http://code.jquery.com/jquery-1.11.1.js">
-</script><script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+
+<script>
 var socket = io();
 var username = "<%= username %>";
 socket.emit('username', username);

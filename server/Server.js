@@ -6,6 +6,7 @@ var passport = require('./libs/passport');
 var bodyParser = require('body-parser').urlencoded({ extended: true });
 var morgan = require('morgan')('combined');
 var cookie = require('cookie-parser')();
+var cluster = require('cluster');
 
 app.use(flash());
 app.use(morgan);
@@ -16,7 +17,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.set('view engine', 'ejs');
-app.use(express.static(__dirname + '/views'));
+app.use(express.static(__dirname + '/public'));
 
 require('./routes')(app, passport);
 
@@ -24,7 +25,6 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
 io.on('connection', function (socket, username){
-  console.log('User connected');
   socket.on('username', function(username){
     socket.username = username;
   });
